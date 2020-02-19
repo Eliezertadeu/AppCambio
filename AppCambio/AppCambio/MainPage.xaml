@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppCambio.MainPage">
+
+    <StackLayout VerticalOptions="Center" Padding="20">
+
+        <Label
+            Text="Qual é o valor em Reais R$?"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            FontSize="30"
+            FontAttributes="Bold"
+            Margin="0, 0, 0, 25"
+            TextColor="#4169e1"
+        />
+        <Label
+            Text="Qual o valor da cotação do dolar hoje?"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            FontSize="Large"
+        />
+        <Entry
+            x:Name="valorDolar" Placeholder="Informe o valor do Dolar:" Keyboard="Numeric"
+        />
+
+        <Label
+            Text="Digite a quantidade em Dolares:"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            FontSize="Large"
+        />
+        
+        <Entry 
+            x:Name="qntEmReis" Placeholder="Valor em reais" Keyboard="Numeric"    
+        />
+        <Button 
+            x:Name="btnCalcular"
+            Clicked="CalcularConversao"
+            Text="Converter"
+            BackgroundColor="#4169e1"
+            TextColor="#FFF"
+        />
+
+        <Label
+            Margin="0,50,0,0"
+            Text="Valor convertido é: "
+            FontSize="25"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+        />
+        <Label 
+            x:Name="valorConvertido"
+            Text="" 
+            FontSize="25"
+            HorizontalOptions="Center"
+        />
+    </StackLayout>
+
+</ContentPage>
